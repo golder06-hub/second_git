@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b12;
+    color: white;
+}
+
+
+/* Navbar */
+
+header {
+    height: 75px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #11111b;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff2d75;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ff2d75;
+}
+
+
+/* Search */
+
+.search {
+    display: flex;
+}
+
+.search input {
+    width: 180px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #20202c;
+    color: white;
+}
+
+.search button {
+    border: none;
+    padding: 10px 14px;
+    background: #ff2d75;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #090910 20%,
+            rgba(9, 9, 16, .75),
+            rgba(9, 9, 16, .2)
+        ),
+        url("https://placehold.co/1600x700?text=Anime+World")
+        center / cover;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.small-title {
+    color: #ff2d75;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: .95;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #ff2d75;
+}
+
+.hero p {
+    color: #ccc;
+    line-height: 1.7;
+}
+
+.watch-btn {
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #ff2d75;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.watch-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* Sections */
+
+.container {
+    width: 88%;
+    margin: 50px auto;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    font-size: 25px;
+}
+
+.section-title a {
+    color: #ff2d75;
+    text-decoration: none;
+}
+
+
+/* Anime Grid */
+
+.anime-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* Card */
+
+.anime-card {
+    background: #151520;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.anime-card:hover {
+    transform: translateY(-8px);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    margin-bottom: 8px;
+}
+
+.card-info p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: #11111b;
+
+    margin-top: 80px;
+}
+
+footer h2 {
+    color: #ff2d75;
+}
+
+footer p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .anime-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 0 4%;
+    }
+
+    .search input {
+        width: 120px;
+    }
+
+    .anime-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .anime-card img {
+        height: 240px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+}
